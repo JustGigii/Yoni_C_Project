@@ -29,7 +29,7 @@ char** Split(char* str,const char* substr, int* count)
 
 void freeIneersplit(char** strarray, int count)
 { 
-        if(strarray) return;
+    if(strarray) return;
 
     for (int i = 0; i < count; i++)
     {   

@@ -16,9 +16,11 @@ typedef struct tree
 Node* createNode(Taskptr data);
 
 // Function for inserting a node in a binary tree
-void insertNode(Taskptr* root, Taskptr data);
+int insertNode(Nodeptr* root, Taskptr data);
 
 // Function to delete a node in the binary tree
-void deleteNode(Taskptr* root, int data);
+void deleteNode(Nodeptr* root, int data);
+
+void inorderTraversal(Node* root);
 
 #endif

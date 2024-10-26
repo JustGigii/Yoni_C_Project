@@ -52,13 +52,19 @@ Taskptr convertTask(char * string)
 int comperTask(Taskptr a, Taskptr b)
 {
     int cmp;
-    cmp = a->CompDate.year - b->CompDate.year;
-    if(!cmp) return cmp;
-    cmp = a->CompDate.month - b->CompDate.month;
-    if(!cmp) return cmp;
-    cmp = a->CompDate.day - b->CompDate.day;
+    cmp = a->TargetDate.year - b->TargetDate.year;
+    if(cmp != 0) return cmp;
+    cmp = a->TargetDate.month - b->TargetDate.month;
+    if(cmp != 0) return cmp;
+    cmp = a->TargetDate.day - b->TargetDate.day;
     return cmp;
 
 
+}
+int freestask(Taskptr task)
+{
+    free(task->description);
+    free(task);
+    return 0;
 }
 

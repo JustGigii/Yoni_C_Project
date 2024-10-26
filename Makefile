@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Wno-error
 
-OBJECTS=main.o datastructcher.o StringUtils.o Fileutils.o 
+OBJECTS=main.o datastructcher.o StringUtils.o Fileutils.o tree.o
 program: $(OBJECTS)
 	$(CC) $(CFLAGS) -o program $(OBJECTS)
 
@@ -16,8 +16,9 @@ StringUtils.o: source/StringUtils.c
 
 Fileutils.o: source/FileUtils.c
 	$(CC) $(CFLAGS) -c source/FileUtils.c
+
+tree.o: source/tree.c
+	$(CC) $(CFLAGS) -c source/tree.c
 	
-
-
 clean:
 	del -rf *.o program

@@ -25,4 +25,5 @@ Date createTaskDate(short year, short month, short day);
 Taskptr createTask(short tag, char* description, Date TargetDate, Date CompDate);
 Taskptr convertTask(char * string);
 int comperTask(Taskptr a, Taskptr b);
+int freestask(Taskptr task);
 #endif
